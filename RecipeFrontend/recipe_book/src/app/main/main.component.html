@@ -1,0 +1,53 @@
+<article class="container">
+  <!-- Картинки на фоне -->
+  <img class="title-img" src="assets/images/title_img.jpg" alt="">
+  <img class="wave2" src="assets/images/wave2.svg" alt="">
+  <!-- Картинки на фоне -->
+
+  <h1 class="main__title">Готовь и делись рецептами</h1>
+  <p class="main__text">Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
+  <a class="btn_orange btn_orange_with-icon" routerLink="/add-recipe">
+    <img class="btn_orange_with-icon__icon" src="assets/images/plus.svg" alt="">
+    Добавить рецепт
+  </a>
+  <button class="main__text__btn-enter btn_transparent btn_transparent_short">Войти</button>
+
+  <section class="sorting-by-tags">
+    <h2 class="sorting-by-tags__title">Умная сортировка по тегам</h2>
+    <p class="sorting-by-tags__text">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить
+      любые категории.</p>
+    <div class="catergory-cards">
+      <app-recipe-selection
+        icon="book"
+        title="Простые блюда"
+        text="Время приготвления таких блюд не более 1 часа">
+      </app-recipe-selection>
+
+      <app-recipe-selection
+        icon="omelet"
+        title="Детское"
+        text="Самые полезные блюда которые можно детям любого возраста">
+      </app-recipe-selection>
+
+      <app-recipe-selection
+        icon="chef"
+        title="От шеф-поваров"
+        text="Требуют умения, времени и терпения, зато как в ресторане">
+      </app-recipe-selection>
+
+      <app-recipe-selection
+        icon="carrot"
+        title="На праздник"
+        text="Чем удивить гостей, чтобы все были сыты за праздничным столом">
+      </app-recipe-selection>
+    </div>
+  </section>
+
+  <section class="search-recipe_in-main">
+    <h2 class="title search-recipe__title">Поиск рецептов</h2>
+    <p class="search-recipe_in-main__text">Введите примерное название блюда, а мы по тегам найдем его</p>
+    <app-search-string></app-search-string>
+  </section>
+
+</article>
+

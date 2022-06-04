@@ -1,0 +1,11 @@
+<div class="catergory-card">
+  <div class="catergory-card__backround-icon">
+    <img *ngIf="icon === 'book'" src="assets/images/ic-menu.svg" alt="">
+    <img *ngIf="icon === 'omelet'" src="assets/images/omelet.svg" alt="">
+    <img *ngIf="icon === 'chef'" src="assets/images/ic-chef.svg" alt="">
+    <img *ngIf="icon === 'carrot'" src="assets/images/carrot.svg" alt="">
+  </div>
+
+  <h3 class="catergory-card__title">{{title}}</h3>
+  <p class="catergory-card__text">{{text}}</p>
+</div>

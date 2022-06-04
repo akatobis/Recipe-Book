@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Add recipe</title>
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/recipe.css">
+   <link rel="stylesheet" href="css/detailed.css">
+   <link rel="stylesheet" href="css/add-recipe.css">
+   <link rel="stylesheet" href="css/zeroing_style.css">
+</head>
+<body>
+
+   <!-- Волны на заднем фоне -->
+   <img class="wave1" src="images/wave1.svg" alt="">
+   <!-- Волны на заднем фоне -->
+
+   <article class="container">
+      <header class="top">
+         <img class="logo" src="images/logo.svg" alt="Recipes">
+         <div class="top__interactive">
+            <nav>
+               <ul class="navigation">
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Главная</li>
+                  </a>
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Рецепты</li>
+                  </a>
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Избранное</li>
+                  </a>
+               </ul>
+            </nav>
+            <div class="login">
+               <div class="elipse_orange .elipse_mini"><img src="images/person.svg" alt=""></div>
+               <p class="btn-authorization__text">Привет, Татьяна</p>
+               <div class="stick"></div>
+               <button class="btn-exit"><img src="images/exit.svg" alt=""></button>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <section class="create-recipe">
+            <button class="back">
+               <img src="images/keyboard_backspace.svg" alt="">
+               <p class="back__text">Назад</p>
+            </button>
+         
+            <div class="recipe-top">
+               <h2 class="create-recipe__title">Добавить новый рецепт</h2>
+               <button class="btn_orange btn_orange_long">Опубликовать</button>
+            </div>
+         
+            <div class="recipe">
+               <div class="uploadin-photos">
+                  <div class="uploadin-photos__content">
+                     <img class="uploadin-photos__icon" src="images/bi_cloud-download.svg" alt="">
+                     <p class="uploadin-photos__text">Загрузите фото готового блюда</p>
+                  </div>
+               </div>
+
+               <div class="recipe__content">
+                  <form class="recipe-form">
+                     <input class="input-recipe" type="text" placeholder="Название рецепта">
+                     <textarea class="recipe-form__description-resipe" cols="50" rows="4"
+                        placeholder="Краткое описание рецепта (150 символов)"></textarea>
+                     <input class="input-recipe" type="text" placeholder="Добавить теги">
+                     <div class="recipe-form__countings">
+                  
+                        <div class="recipe-form__counting">
+                           <select class="recipe-form__select" name="" id="">
+                              <option value="" selected disabled hidden>Время готовки</option>
+                           </select>
+                           <label class="recipe-form__select_text" for="">Минут</label>
+                        </div>
+                  
+                        <div class="recipe-form__counting">
+                           <select class="recipe-form__select" name="" id="">
+                              <option value="" selected disabled hidden>Порций в блюде</option>
+                           </select>
+                           <label class="recipe-form__select_text" for="">Персон</label>
+                        </div>
+                  
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+
+         <section class="cooking">
+            <div class="add-ingredients">
+               <h3 class="add-ingredients__title">Ингридиенты</h3>
+               <img class="add-ingredients__img" src="images/close.svg" alt="">
+               <div class="add-ingredient">
+                  <input class="add-ingredient__title" type="text" placeholder="Заголовок для ингридиентов">
+                  <textarea class="add-ingredient__products" placeholder="Список подуктов для категории"></textarea>
+               </div>
+
+               <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn">
+                  <img src="images/add.svg" alt="">
+                  <p class="add-ingredients__text_btn">Добавить заголовок</p>
+               </button>
+            </div>
+         
+            <div class="steps">
+               <div class="add-step step">
+                  <div class="add-step__title">
+                     <h3>Шаг 1</h3>
+                     <img src="images/close.svg" alt="">
+                  </div>
+
+                  <textarea class="add-step__description" placeholder="Описание шага"></textarea>
+               </div>
+
+               <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn">
+                  <img src="images/add.svg" alt="">
+                  <p class="add-step__text_btn">Добавить шаг</p>
+               </button>
+            </div>
+         </section>
+      </main>
+   </article>
+
+   <footer class="end">
+      <img class="end__logo" src="images/logo.svg" alt="Recipes">
+      <p class="end__text">© Recipes 2021</p>
+   </footer>
+</body>
+</html>

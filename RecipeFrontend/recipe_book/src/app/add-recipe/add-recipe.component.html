@@ -1,0 +1,97 @@
+<article class="container">
+
+  <section class="description-recipe">
+    <a class="back" routerLink="/recipes">
+      <img src="assets/images/keyboard_backspace.svg" alt="">
+      <p class="back__text">Назад</p>
+    </a>
+
+    <div class="recipe-top">
+      <h2 class="create-recipe__title title">Добавить новый рецепт</h2>
+      <button class="btn_orange btn_orange_long">Опубликовать</button>
+    </div>
+
+    <div class="recipe">
+      <div class="uploadin-photos">
+        <div class="uploadin-photos__content">
+          <img class="uploadin-photos__icon" src="assets/images/bi_cloud-download.svg" alt="">
+          <p class="uploadin-photos__text">Загрузите фото готового блюда</p>
+        </div>
+      </div>
+
+      <div class="recipe__content">
+        <form class="recipe-form">
+          <input class="input-recipe" type="text" placeholder="Название рецепта">
+          <textarea class="recipe-form__description-resipe" cols="50" rows="4"
+            placeholder="Краткое описание рецепта (150 символов)"></textarea>
+          <!-- <input class="input-recipe" type="text" placeholder="Добавить теги"> -->
+
+          <mat-form-field class="example-chip-list" appearance="fill">
+            <mat-label>Добавить теги</mat-label>
+            <mat-chip-list #chipList aria-label="Fruit selection">
+              <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+                {{fruit.name}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+           </mat-form-field>
+
+          <div class="recipe-form__countings">
+
+            <div class="recipe-form__counting">
+              <select class="recipe-form__select" name="" id="">
+                <option value="" selected disabled hidden>Время готовки</option>
+              </select>
+              <label class="recipe-form__select_text" for="">Минут</label>
+            </div>
+
+            <div class="recipe-form__counting">
+              <select class="recipe-form__select" name="" id="">
+                <option value="" selected disabled hidden>Порций в блюде</option>
+              </select>
+              <label class="recipe-form__select_text" for="">Персон</label>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="cooking">
+    <div class="add-ingredients">
+      <h3 class="add-ingredients__title">Ингридиенты</h3>
+      <img class="add-ingredients__img" src="assets/images/close.svg" alt="">
+      <div class="add-ingredient">
+        <input class="add-ingredient__title" type="text" placeholder="Заголовок для ингридиентов">
+        <textarea class="add-ingredient__products" placeholder="Список подуктов для категории"></textarea>
+      </div>
+
+      <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn">
+        <img src="assets/images/add.svg" alt="">
+        <p class="add-ingredients__text_btn">Добавить заголовок</p>
+      </button>
+    </div>
+
+    <div class="steps">
+      <div class="add-step step">
+        <div class="add-step__title">
+          <h3>Шаг 1</h3>
+          <img src="assets/images/close.svg" alt="">
+        </div>
+
+        <textarea class="add-step__description" placeholder="Описание шага"></textarea>
+      </div>
+
+      <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn">
+        <img src="assets/images/add.svg" alt="">
+        <p class="add-step__text_btn">Добавить шаг</p>
+      </button>
+    </div>
+
+  </div>
+</article>

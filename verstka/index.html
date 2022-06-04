@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Main</title>
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mulish&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/zeroing_style.css">
+</head>
+<body>
+
+   <!-- Картинки на фоне -->
+   <img class="title-img" src="images/title_img.jpg" alt="">
+   <img class="wave1" src="images/wave1.svg" alt="">
+   <img class="wave2" src="images/wave2.svg" alt="">
+   <!-- Картинки на фоне -->
+
+   <article class="container">
+      <header class="top">
+         <img class="logo" src="images/logo.svg" alt="Recipes">
+         <div class="top__interactive">
+            <nav>
+               <ul class="navigation">
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Главная</li>
+                  </a>
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Рецепты</li>
+                  </a>
+                  <a class="navigation__item" href="">
+                     <li class="li_none-point">Избранное</li>
+                  </a>
+               </ul>
+            </nav>
+            <button class="btn-authorization_logo">
+               <div class="elipse_orange .elipse_mini">
+                  <img src="images/person.svg" alt="">
+               </div>
+               <p class="btn-authorization__text">Войти</p>
+            </button>
+         </div>
+      </header>
+
+      <main>
+
+         <section class="main-section">
+            <h1 class="main__title">Готовь и делись рецептами</h1>
+            <p class="main__text">Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
+            <button class="btn_orange btn_orange_with-icon">
+               <img class="btn_orange_with-icon__icon" src="images/plus.svg" alt="">
+               Добавить рецепт
+            </button>
+            <button class="main__text__btn-enter btn_transparent btn_transparent_short">Войти</button>
+         </section>
+
+         <section class="sorting-by-tags">
+            <h2 class="title">Умная сортировка по тегам</h2>
+            <p class="sorting-by-tags__text">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p>
+            <div class="catergory-cards">
+               <div class="catergory-card">
+                  <div class="catergory-card__backround-icon"><img src="images/ic-menu.svg" alt=""></div>
+                  <h3 class="catergory-card__title">Простые блюда</h3>
+                  <p class="catergory-card__text">Время приготвления таких блюд не более 1 часа</p>
+               </div>
+               <div class="catergory-card">
+                  <div class="catergory-card__backround-icon"><img src="images/omelet.svg" alt=""></div>
+                  <h3 class="catergory-card__title">Детское</h3>
+                  <p class="catergory-card__text">Самые полезные блюда которые можно детям любого возраста</p>
+               </div>
+               <div class="catergory-card">
+                  <div class="catergory-card__backround-icon"><img src="images/ic-chef.svg" alt=""></div>
+                  <h3 class="catergory-card__title">От шеф-поваров</h3>
+                  <p class="catergory-card__text">Требуют умения, времени и терпения, зато как в ресторане</p>
+               </div>
+               <div class="catergory-card">
+                  <div class="catergory-card__backround-icon"><img src="images/carrot.svg" alt=""></div>
+                  <h3 class="catergory-card__title">На праздник</h3>
+                  <p class="catergory-card__text">Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+               </div>
+            </div>
+         </section>
+
+         <section class="recipe-of-day">
+            <img class="img_soup" src="images/soup.jpg" alt="">
+            <div class="recipe-of-day__description">
+               <h2 class="title recipe-of-day__title">Тыквенный супчик на кокосовом молоке</h2>
+               <p class="recipe-of-day__text">Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас! Ароматный, согревающий суп-пюре на
+               кокосовом молоке. Можно даже в Пост!</p>
+            </div>
+         </section>
+
+         <section class="search-recipe_in-main">
+            <h2 class="title search-recipe__title">Поиск рецептов</h2>
+            <p class="search-recipe_in-main__text">Введите примерное название блюда, а мы по тегам найдем его</p>
+            <div class="search">
+               <input class="search__string search__string__short" type="text" placeholder="Название блюда....">
+               <button class="btn_orange btn_orange_short">Поиск</button>
+            </div>
+         </section>
+
+      </main>
+   </article>
+
+   <footer class="end">
+      <img class="end__logo" src="images/logo.svg" alt="Recipes">
+      <p class="end__text">© Recipes 2021</p>
+   </footer>
+</body>
+</html>

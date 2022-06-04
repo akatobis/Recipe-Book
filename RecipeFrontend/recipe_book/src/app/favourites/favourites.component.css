@@ -1,0 +1,15 @@
+.favourite-recipes
+{
+  margin-top: 82px;
+}
+
+.absence-message
+{
+  margin-top: 130px;
+  margin-bottom: 1000px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #FDB100;
+  opacity: 0.5;
+}

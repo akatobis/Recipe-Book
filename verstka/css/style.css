@@ -1,0 +1,327 @@
+*
+{
+   font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+   background-color: #fdfdff;
+}
+
+.container
+{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.top
+{
+   display: flex;
+   margin-top: 40px;
+}
+
+.logo
+{
+   max-width: 99px;
+   min-height: 29px;
+   margin-right: 80px;
+}
+
+.top__interactive
+{
+   display: flex;
+   width: 1020px;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.navigation
+{
+   display: flex;
+}
+
+.navigation__item
+{
+   margin-right: 40px;
+   color: #9196A1;
+}
+
+.navigation__item:last-child
+{
+   margin-right: 0;
+}
+
+.navigation__item:active
+{
+   color: #3A3C41;
+   font-weight: 600;
+}
+
+.li_none-point
+{
+   list-style-type: none;
+   font-size: 18px;
+}
+
+.btn-authorization_logo
+{
+   display: flex;
+   align-items: center; 
+}
+
+.elipse_orange
+{
+   border-radius: 19px;
+   background-color:#FDB100;
+   padding: 11px;
+}
+
+.elipse_mini
+{
+   max-width: 38px;
+   min-height: 38px;
+}
+
+.btn-authorization__text
+{
+   font-size: 18px;
+   font-weight: 600;
+   color: #FDB100;
+   margin-left: 14px;
+}
+
+.title-img 
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: -1;
+   border-radius: 0px 0px 0px 200px;
+}
+
+.main__title
+{
+   max-width: 688px;
+   font: 700 72px/80px 'Montserrat';
+   margin-top: 133px; 
+   color: #25292D;
+}
+
+.main__text
+{
+   margin-top: 16px;
+   margin-bottom: 42px;
+   max-width: 566px;
+   font-size: 18px;
+   line-height: 28px;
+}
+
+.btn_orange
+{
+   min-height: 60px;
+   background-color: #FDB100;
+   border-radius: 16px;
+   font: 600 18px/28px 'Montserrat', sans-serif;
+   color: #fff;
+}
+
+.btn_orange_with-icon
+{
+   min-width: 278px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn_orange_with-icon__icon
+{
+   margin-right: 23px;
+}
+
+.main__text__btn-enter
+{
+   margin-left: 24px;
+}
+
+.btn_transparent
+{
+   border: 1px solid #FDB100;
+   border-radius: 16px;
+   min-height: 60px;
+   color: #FDB100;
+   font-weight: 600;
+   font-size: 18px;
+}
+
+.btn_transparent_short
+{
+   min-width: 216px;
+}
+
+.wave1
+{
+   position: absolute;
+   width: 100%;
+   left: 0px;
+   top: 90px;
+   z-index: -2;
+}
+
+.sorting-by-tags
+{
+   margin-top: 352px;
+}
+
+.title
+{
+   font-size: 42px;
+   font-weight: 700;
+   color: #25292D;
+}
+
+.sorting-by-tags__text
+{
+   margin-top: 16px;
+   font-size: 18px;
+   line-height: 32px;
+   color: #4A525A;
+   width: 700px;
+}
+
+.catergory-cards
+{
+   margin-top: 42px;
+   display: flex;
+}
+
+.catergory-card
+{
+   margin-left: 29px;
+   padding: 24px 24px 32px;
+   box-sizing: border-box;
+   max-width: 278px;
+   min-height: 271px;
+   background-color: #fff;
+   box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+   border-radius: 24px;
+}
+
+.catergory-card:first-child
+{
+   margin-left: 0;
+}
+
+.catergory-card__backround-icon
+{
+   max-width: 50px;
+   min-height: 50px;
+   background-color: #FFEFCC;
+   border-radius: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.catergory-card__title
+{
+   margin-top: 24px;
+   color: #25292D;
+   font-weight: 700;
+   font-size: 24px;
+}
+
+.catergory-card__text
+{
+   margin-top: 16px;
+   font-size: 18px;
+   line-height: 30px;
+   color: #4A525A;
+}
+
+.recipe-of-day
+{
+   margin-top: 157px;
+   display: flex;
+}
+
+.img_soup
+{
+   border-radius: 72px 0px;
+}
+
+.wave2
+{
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 1143px;
+   z-index: -1;
+}
+
+.search-recipe_in-main
+{
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.search-recipe_in-main__text
+{
+   margin-top: 16px;
+   margin-bottom: 64px;
+   font-family: 'Mulish', sans-serif;
+   font-size: 18px;
+   color: #4A525A;
+}
+
+.search
+{
+   display: flex;
+}
+
+.search__string
+{
+   all: unset;
+   box-sizing: border-box;
+   background-color: #fff;
+   box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+   border-radius: 16px;
+   border: 0;
+   margin-right: 16px;
+   padding-left: 32px;
+}
+
+.search__string__short
+{
+   min-width: 716px;
+}
+
+.btn_orange_short
+{
+   width: 152px;
+}
+
+.end
+{
+   margin-top: 106px;   
+   min-height: 113px;
+   padding: 0 120px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #FBF9F4;
+}
+
+.end__logo
+{
+   max-width: 132px;
+   min-height: 39px;
+}
+
+.end__text
+{
+   font-weight: 500;
+   font-size: 20px;
+   color: #4A525A;
+}
