@@ -13,7 +13,8 @@ export interface Fruit {
 })
 export class AddRecipeComponent implements OnInit {
 
-    addOnBlur = true;
+  //ang material
+  addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   fruits: Fruit[] = [];
 

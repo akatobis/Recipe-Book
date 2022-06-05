@@ -13,7 +13,6 @@
   font: 700 72px/86px 'Montserrat', sans-serif;
   margin-top: 138px;
   color: #25292D;
-  letter-spacing: 1px;
 }
 
 .main__text
@@ -32,6 +31,7 @@
 .sorting-by-tags
 {
   margin-top: 352px;
+  margin-bottom: 117px;
 }
 
 .sorting-by-tags__title

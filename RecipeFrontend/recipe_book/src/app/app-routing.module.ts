@@ -4,13 +4,15 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { MainComponent } from './main/main.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'recipes', component: RecipesComponent },
   { path: 'favourites', component: FavouritesComponent },
-  { path: 'add-recipe', component: AddRecipeComponent }
+  { path: 'add-recipe', component: AddRecipeComponent },
+  { path: 'recipe', component: RecipeComponent }
 ];
 
 @NgModule({

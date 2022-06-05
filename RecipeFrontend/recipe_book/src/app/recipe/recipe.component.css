@@ -1,0 +1,53 @@
+.recipe-top
+{
+  margin-top: 49px;
+}
+
+.recipe-top__content
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-top__btns
+{
+  display: flex;
+}
+
+.delete-recipe
+{
+  margin-right: 18px;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(145, 150, 161, 0.7);
+  border-radius: 16px;
+}
+
+.delete-recipe:hover
+{
+  border-color: #f44336;
+}
+
+.cooking
+{
+   margin-top: 40px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.parts-of-the-dish
+{
+  width: 396px;
+}
+
+.parts-of-the-dish__title
+{
+  font-weight: 700;
+  font-size: 20px;
+  color: #FDB100;
+}
+
+

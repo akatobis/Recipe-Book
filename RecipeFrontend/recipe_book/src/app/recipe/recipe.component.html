@@ -1,1 +1,40 @@
-<p>recipe works!</p>
+<article class="container">
+
+  <section class="recipe-top">
+    <app-btn-back></app-btn-back>
+
+    <div class="recipe-top__content">
+      <h2 class="title">Клубничная Панна-Котта</h2>
+
+      <div class="recipe-top__btns">
+        <button class="delete-recipe">
+          <img src="assets/images/ic_outline-delete.svg" alt="">
+        </button>
+        <a class="btn_orange btn_orange_with-icon">
+          <img class="btn_orange_with-icon__icon" src="assets/images/edit.svg" alt="">
+          Редактировать
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <app-recipe-card></app-recipe-card>
+
+  <section class="cooking">
+
+    <div class="parts-of-the-dish">
+      <h3 class="parts-of-the-dish__title">Ингридиенты</h3>
+      <div class="ingredients-block">
+        <app-ingredients></app-ingredients>
+        <app-ingredients></app-ingredients>
+      </div>
+    </div>
+
+    <div class="steps">
+      <app-step></app-step>
+      <app-step></app-step>
+    </div>
+
+  </section>
+</article>

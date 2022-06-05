@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
-
 import {MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -21,6 +20,9 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BtnBackComponent } from './btn-back/btn-back.component';
+import { IngredientsComponent } from './recipe/ingredients/ingredients.component';
+import { StepComponent } from './recipe/step/step.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RecipeCardComponent,
     RecipesComponent,
     RecipeComponent,
+    BtnBackComponent,
+    IngredientsComponent,
+    StepComponent,
   ],
   imports: [
     BrowserModule,

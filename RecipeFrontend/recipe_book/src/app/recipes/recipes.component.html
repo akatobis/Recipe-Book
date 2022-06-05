@@ -1,11 +1,14 @@
 <article class="container">
 
-  <section class="category">
-    <h2 class="title catergory__title">Рецепты</h2>
+  <section class="recipes-top">
+    <h2 class="title">Рецепты</h2>
     <a class="btn_orange btn_orange_with-icon" routerLink="/add-recipe">
       <img class="btn_orange_with-icon__icon" src="assets/images/plus.svg" alt="">
       Добавить рецепт
     </a>
+  </section>
+
+  <section class="category">
 
     <div class="category-cards">
       <app-recipe-selection [icon]="'book'" title="Простые блюда"></app-recipe-selection>
@@ -15,16 +18,13 @@
     </div>
   </section>
 
-
-
   <section class="search-recipe">
     <h3 class="search-recipe__title">Поиск рецепта</h3>
     <app-search-string></app-search-string>
   </section>
 
   <section class="recipes">
-    <app-recipe-card></app-recipe-card>
-    <app-recipe-card></app-recipe-card>
+    <a routerLink="/recipe"><app-recipe-card></app-recipe-card></a> <!-- Для удобства пока роутинг сделал здесь. Потом перемещу -->
     <button class="resipes__btn btn_transparent btn_transparent_average">Загрузить еще</button>
   </section>
 

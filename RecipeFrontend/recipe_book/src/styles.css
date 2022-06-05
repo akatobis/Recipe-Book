@@ -168,7 +168,7 @@ select {
 
 .btn_orange
 {
-   min-height: 73px;
+   min-height: 60px;
    background-color: #FDB100;
    border-radius: 16px;
    font: 600 18px/28px 'Montserrat', sans-serif;
@@ -230,7 +230,7 @@ select {
 
 .back__text
 {
-   margin-left: 10px;
+   margin-left: 10px !important;
    font-weight: 500;
    font-size: 18px;
    color: #FDB100;
@@ -254,4 +254,8 @@ select {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body
+{
+  margin: 0;
+  font-family: 'Montserrat', "Helvetica Neue", sans-serif !important;
+}

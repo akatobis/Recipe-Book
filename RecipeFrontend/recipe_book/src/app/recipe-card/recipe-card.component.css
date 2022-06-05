@@ -30,9 +30,39 @@
    padding: 36px 30px 65px 53px;
 }
 
+.recipe-content__top
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags
+{
+  display: flex;
+}
+
+.tag
+{
+  margin-right: 5px;
+  width: 90px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(253, 177, 0, 0.2);
+  color: #F29E1F;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.tag:last-child
+{
+  margin-right: 0;
+}
+
 .recipe-content__retings
 {
-   margin-left: 462px;
    display: flex;
 }
 
