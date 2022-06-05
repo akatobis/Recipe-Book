@@ -17,7 +17,7 @@ builder.Services.AddDbContext<RecipeDbContext>( options =>
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -29,13 +29,13 @@ if ( !app.Environment.IsDevelopment() )
     //app.UseHsts();
 }
 
-app.UseSwagger();
+//app.UseSwagger();
 
-app.UseSwaggerUI( options =>
-{
-    options.SwaggerEndpoint( "/swagger/v1/swagger.json", "v1" );
-    options.RoutePrefix = string.Empty;
-});
+//app.UseSwaggerUI( options =>
+//{
+//    options.SwaggerEndpoint( "/swagger/v1/swagger.json", "v1" );
+//    options.RoutePrefix = string.Empty;
+//});
 
 //app.UseHttpsRedirection();
 app.UseStaticFiles();
