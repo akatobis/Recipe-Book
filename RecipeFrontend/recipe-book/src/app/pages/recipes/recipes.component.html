@@ -1,0 +1,45 @@
+<article class="container">
+
+  <section class="recipes-top">
+    <h2 class="title">Рецепты</h2>
+    <a class="btn_orange btn_orange_with-icon" routerLink="/add-recipe">
+      <img class="btn_orange_with-icon__icon" src="assets/images/plus.svg" alt="">
+      Добавить рецепт
+    </a>
+  </section>
+
+  <section class="category">
+    <div class="category-cards">
+      <app-recipe-selection [icon]="'book'" title="Простые блюда"></app-recipe-selection>
+      <app-recipe-selection [icon]="'omelet'" title="Детское"></app-recipe-selection>
+      <app-recipe-selection [icon]="'chef'" title="От шеф-поваров"></app-recipe-selection>
+      <app-recipe-selection [icon]="'carrot'" title="На праздник"></app-recipe-selection>
+    </div>
+  </section>
+
+  <section class="search-recipe">
+    <h3 class="search-recipe__title">Поиск рецепта</h3>
+    <app-search-string class="search-string" [searchString]="searchMain" (onSearch)="onSearchRecipe($event)"></app-search-string>
+  </section>
+
+  <section class="recipes">
+    <a *ngFor="let recipe of recipes" routerLink="/recipe/{{recipe.recipeId}}">
+      <app-recipe-card
+        [title]=recipe.title
+        [description]=recipe.description
+        [cookingTime]=recipe.cookingTime
+        [portions]=recipe.portions
+        [image]=recipe.image
+        [recipeFavouritesCount]=recipe.recipeFavouritesCount
+        [recipeLikesCount]=recipe.recipeLikesCount
+        [recipeTags]=recipe.recipeTags
+        >
+      </app-recipe-card>
+    </a>
+
+    <app-preloader></app-preloader>
+
+    <button class="resipes__btn btn_transparent btn_transparent_average" (click)="downloadRecipes()">Загрузить еще</button>
+  </section>
+
+</article>

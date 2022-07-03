@@ -1,0 +1,147 @@
+<article class="container">
+
+  <section class="description-recipe">
+
+    <app-btn-back></app-btn-back>
+    <div class="recipe-top">
+      <h2 class="create-recipe__title title">{{pagesTitle}}</h2>
+      <button
+        class="btn_orange btn_orange_long"
+        (click)="addRecipe(title.value, description.value)"
+        >{{btnText}}
+      </button>
+    </div>
+
+    <div class="recipe">
+      <div class="uploadin-photos">
+        <div class="uploadin-photos__content">
+          <img class="uploadin-photos__icon" src="assets/images/bi_cloud-download.svg" alt="">
+          <p class="uploadin-photos__text">Загрузите фото готового блюда</p>
+        </div>
+      </div>
+
+      <div class="recipe__content">
+        <div class="recipe-form">
+          <input class="input-recipe" type="text" placeholder="Название рецепта" #title [(ngModel)]="recipe.title">
+          <textarea class="recipe-form__description-resipe"  [maxlength]="150"
+            placeholder="Краткое описание рецепта (150 символов)" #description [(ngModel)]="recipe.description"></textarea>
+
+          <mat-form-field  class="example-chip-list mat-focused mat-form-field-should-float ng-star-inserted " appearance="fill">
+            <mat-label></mat-label>
+            <mat-chip-list #chipList aria-label="Fruit selection">
+              <mat-chip *ngFor="let recipeTag of recipe.recipeTags" (removed)="remove(recipeTag)">
+                {{recipeTag.name}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input
+                placeholder="Добавить теги"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)"
+              >
+            </mat-chip-list>
+          </mat-form-field>
+
+          <div class="recipe-form__countings">
+
+            <div class="recipe-form__counting">
+              <div class="select">
+                <button class="select__header" (click)="showCookingTimeDropList()">
+                  <span *ngIf="recipe.cookingTime===0" class="select__current">{{defoltMessageCookingTime}}</span>
+                  <span *ngIf="recipe.cookingTime!==0" class="select__current">{{recipe.cookingTime}}</span>
+                  <img src="assets/images/keyboard_arrow_down.svg" alt="">
+                </button>
+
+                <div class="select__body select__body_long" *ngIf="visibleCookingTimeDropList">
+                  <div
+                    class="recipe-form__option"
+                    *ngFor="let time of cookTime"
+                    (click)="choiceCookingTime(time)"
+                    >{{time}}
+                  </div>
+                </div>
+              </div>
+
+              <p class="recipe-form__select_text">Минут</p>
+            </div>
+
+            <div class="recipe-form__counting">
+              <div class="select">
+                <button class="select__header" (click)="showPortionsDropList()">
+                  <span *ngIf="recipe.portions===0" class="select__current">{{defoltMessageCountPortion}}</span>
+                  <span *ngIf="recipe.portions!==0" class="select__current">{{recipe.portions}}</span>
+                  <img src="assets/images/keyboard_arrow_down.svg" alt="">
+                </button>
+
+                <div class="select__body select__body_short" *ngIf="visiblePortionsDropList">
+                  <div
+                    class="recipe-form__option"
+                    *ngFor="let couseCountPortions of countPortions"
+                    (click)="choiceCountPortion(couseCountPortions)"
+                    >{{couseCountPortions}}
+                  </div>
+                </div>
+              </div>
+
+              <p class="recipe-form__select_text">Персон</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cooking">
+
+    <div class="add-ingredients">
+
+      <h3 class="add-ingredients__title">Ингридиенты</h3>
+
+      <div *ngFor="let ingredientsBlock of recipe.recipeIngredientsBlocks" class="add-ingrediente">
+
+        <button >
+          <img class="add-ingredients__img" (click)="deleteIngredientsBlock()" src="assets/images/close.svg" alt="">
+        </button>
+
+        <div class="add-ingredient">
+          <input [(ngModel)]="ingredientsBlock.name" class="add-ingredient__title" type="text"
+            placeholder="Заголовок для ингридиентов">
+          <textarea [(ngModel)]="ingredientsBlock.recipeIngredients" class="add-ingredient__products"
+            placeholder="Список подуктов для категории"></textarea>
+        </div>
+
+      </div>
+
+      <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn" (click)="addIngreidntsBlock()">
+        <img src="assets/images/add.svg" alt="">
+        <p class="add-ingredients__text_btn">Добавить заголовок</p>
+      </button>
+
+    </div>
+
+    <div class="steps-block">
+
+      <div>
+        <div *ngFor="let step of recipe.recipeSteps" class="add-step step">
+          <div class="add-step__title">
+            <h3>Шаг {{step.number}}</h3>
+            <button (click)="deleteStep(step.number)"><img src="assets/images/close.svg" alt=""></button>
+          </div>
+
+          <textarea class="add-step__description" [(ngModel)]="step.description" placeholder="Описание шага"></textarea>
+        </div>
+      </div>
+
+      <button class="btn_transparent btn_transparent_long btn_transparent_with-icon cooking__btn" (click)="addStep()">
+        <img src="assets/images/add.svg" alt="">
+        <p class="add-step__text_btn">Добавить шаг</p>
+      </button>
+
+    </div>
+
+  </section>
+</article>

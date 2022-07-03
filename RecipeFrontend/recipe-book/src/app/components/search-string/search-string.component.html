@@ -1,0 +1,4 @@
+<form class="search">
+  <input #searchBox [(ngModel)]="searchString" class="search__string search__string_short" type="text" placeholder="Название блюда....">
+  <button (click)="reDirect(searchBox.value)" class="btn_orange btn_orange_short" (click)="searchRecipe()">Поиск</button>
+</form>

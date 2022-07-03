@@ -1,0 +1,19 @@
+<header class="top">
+  <a routerLink="/main"><img class="logo" src="assets/images/logo.svg" alt="Recipes"></a>
+  <div class="top__interactive"(click)="active()">
+    <nav>
+      <ul class="navigation" >
+        <a class="navigation__item navigation__item_main" routerLink="/main">
+          <li class="li_none-point">Главная</li>
+        </a>
+        <a class="navigation__item navigation__item_recipes" routerLink="/recipes">
+          <li class="li_none-point">Рецепты</li>
+        </a>
+        <a class="navigation__item navigation__item_favourites" routerLink="/favourites">
+          <li class="li_none-point">Избранное</li>
+        </a>
+      </ul>
+    </nav>
+    <a routerLink="/my-profile"><app-button-authorization></app-button-authorization></a>
+  </div>
+</header>

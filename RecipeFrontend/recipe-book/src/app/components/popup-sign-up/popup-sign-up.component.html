@@ -1,0 +1,22 @@
+<div class="popup-bg">
+  <div class="popup">
+
+    <button class="close-popup" (click)="close()"><img src="assets/images/close.svg" alt=""></button>
+    <h3 class="popup_title">Регистрация</h3>
+
+    <form class="popupForm" action="">
+      <input class="input-popup input-popup_long" type="text" placeholder="Имя">
+      <input class="input-popup input-popup_long" type="text" placeholder="Логин">
+      <div>
+        <input class="input-popup input-popup_short_left" type="text" placeholder="Пароль" minlength="8">
+        <input class="input-popup input-popup_short" type="text" placeholder="Повторите пароль">
+      </div>
+    </form>
+
+    <button class="sign-up btn_orange btn_orange_long">Зарегистрироваться</button>
+    <button class="btn-back btn_transparent btn_transparent_midle" (click)="close()">Отмена</button>
+
+    <button class="sign-in" (click)="showPopupSignIn()">У меня уже есть аккаунт</button>
+
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="popup-bg">
+  <div class="popup">
+
+    <button class="close-popup" (click)="close()"><img src="assets/images/close.svg" alt=""></button>
+    <h3 class="popup_title">Войти</h3>
+
+    <form [formGroup]="formSignIn" class="popupForm" action="">
+      <input class="input-popup input-popup_long" ngModel formControlName="login" type="text" placeholder="Логин">
+      <input class="input-popup input-popup_long" formControlName="password" type="text" placeholder="Пароль">
+    </form>
+
+    <button class="sign-in btn_orange btn_orange_long" (click)="signIn()">Войти</button>
+    <button class="btn-back btn_transparent btn_transparent_midle" (click)="close()">Отмена</button>
+
+    <button class="sign-up" (click)="showPopupSignUp()">У меня еще нет аккаунта</button>
+
+  </div>
+</div>

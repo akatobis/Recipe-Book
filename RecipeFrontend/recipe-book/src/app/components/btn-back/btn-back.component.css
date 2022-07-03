@@ -1,0 +1,13 @@
+.back
+{
+  display: flex;
+}
+
+.back__text
+{
+   margin-left: 10px;
+   font-weight: 500;
+   font-size: 18px;
+   color: #FDB100;
+}
+

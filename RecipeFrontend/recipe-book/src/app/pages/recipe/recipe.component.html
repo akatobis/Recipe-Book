@@ -1,0 +1,52 @@
+<article class="container">
+
+  <section class="recipe-top">
+    <app-btn-back></app-btn-back>
+
+    <div class="recipe-top__content">
+      <h2 class="title">{{recipe.title}}</h2>
+
+      <div class="recipe-top__btns">
+        <button class="delete-recipe" (click)="deleteRecipe()">
+          <img src="assets/images/ic_outline-delete.svg" alt="">
+        </button>
+        <a class="btn_orange btn_orange_with-icon" routerLink="/add-recipe/{{id}}" [title]="recipe.title">
+          <img class="btn_orange_with-icon__icon" src="assets/images/edit.svg" alt="">
+          Редактировать
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <app-recipe-card
+    [description]=recipe.description
+    [cookingTime]=recipe.cookingTime
+    [portions]=recipe.portions
+    [image]=recipe.image
+    [recipeFavouritesCount]=recipe.recipeFavouritesCount
+    [recipeLikesCount]=recipe.recipeLikesCount
+    [recipeTags]=recipe.recipeTags>
+  </app-recipe-card>
+
+  <section class="cooking">
+
+    <div class="parts-of-the-dish">
+      <h3 class="parts-of-the-dish__title">Ингридиенты</h3>
+      <div class="ingredients-block">
+        <app-ingredients
+          *ngFor="let recipeIngredientsBlock of recipe.recipeIngredientsBlocks"
+          [recipeIngredientsBlock]=recipeIngredientsBlock>
+        </app-ingredients>
+      </div>
+    </div>
+
+    <div class="steps">
+      <app-step
+        *ngFor="let recipeStep of recipe.recipeSteps"
+        [recipeStep]=recipeStep>
+      </app-step>
+    </div>
+
+  </section>
+</article>
