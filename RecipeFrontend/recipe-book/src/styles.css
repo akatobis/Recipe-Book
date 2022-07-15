@@ -1,0 +1,345 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Добавляю глобальные стили */
+*
+{
+   font-family: 'Montserrat', sans-serif;
+   box-sizing: border-box !important;
+}
+
+body
+{
+   background-color: #fdfdff;
+   background-image: url(assets/images/wave1.svg);
+   background-repeat: no-repeat;
+}
+
+/* Убираю не нужные встроенные стили */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Убираем подчёркивание у ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Убираем стили у кнопок */
+button {
+  /* all: unset; */
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  all: unset;
+}
+
+/* Общие стили для всех компонентов */
+
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title
+{
+  font-size: 42px;
+  font-weight: 700;
+  color: #25292D;
+  letter-spacing: 1px;
+}
+
+.wave2
+{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1143px;
+  z-index: -1;
+}
+
+.btn-authorization_logo
+{
+  display: flex;
+  align-items: center;
+}
+
+.elipse_orange
+{
+  border-radius: 19px;
+  background-color:#FDB100;
+  padding: 11px;
+}
+
+.elipse_mini
+{
+  max-width: 38px;
+  min-height: 38px;
+}
+
+.btn-authorization__text
+{
+  font-size: 18px;
+  font-weight: 600;
+  color: #FDB100;
+  margin-left: 14px;
+}
+
+.btn_orange
+{
+  min-height: 60px;
+  background-color: #FDB100;
+  border-radius: 16px;
+  font: 600 18px/28px 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.btn_orange:hover
+{
+  background-color: #ffb300;
+}
+
+.btn_orange:active
+{
+  box-shadow: 1px 1px 7px 0px rgba(34, 60, 80, 0.2) inset;
+}
+
+.btn_orange_with-icon
+{
+  min-width: 278px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_orange_with-icon__icon
+{
+  margin-right: 23px;
+}
+
+.btn_transparent
+{
+  border: 1px solid #FDB100;
+  border-radius: 16px;
+  min-height: 60px;
+  color: #FDB100;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn_transparent:hover,
+.btn_transparent:focus
+{
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+.btn_transparent_short
+{
+  min-width: 216px;
+}
+
+.btn_orange_short
+{
+  min-width: 152px;
+}
+
+.btn_transparent_midle
+{
+  min-width: 278px;
+}
+
+.btn_transparent_average
+{
+  min-width: 309px;
+}
+
+.btn_orange_long
+{
+  min-width: 276px;
+}
+
+.btn_transparent_long
+{
+  width: 380px;
+}
+
+.btn_transparent_with-icon
+{
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.btn_transparent_with-icon__icon
+{
+  margin-right: 49px;
+}
+
+html, body { height: 100%; }
+body
+{
+  margin: 0;
+  font-family: 'Montserrat', "Helvetica Neue", sans-serif !important;
+}
+
+.mat-chip-list-wrapper
+{
+  border: 1px solid rgba(145, 150, 161, 0.4);
+  border-radius: 16px;
+  height: 50px;
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+  padding-left: 30px !important;
+}
+
+.mat-form-field-hide-placeholder
+{
+  all: unset !important;
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  background-image: url(assets/images/text-add-tags.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: left 30px top 17px !important;
+}
+
+.mat-chip-list-wrapper:focus{
+  border: 1px solid #F29E1F !important
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex:focus {
+  border: 1px solid #F29E1F !important
+}
+
+.mat-chip-list-wrapper input.mat-input-element,
+.mat-chip-list-wrapper .mat-standard-chip {
+  margin: 4px;
+  margin-left: 0 !important;
+}
+
+.mat-form-field-subscript-wrapper {
+  position: relative !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent !important;
+}
+
+.mat-form-field-infix {
+  padding: 0 !important;
+  border-top: 0 !important
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-underline::before {
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-ripple {
+  bottom: 0;
+  height: 0px !important;
+}
+
+.mat-chip-list-wrapper input.mat-input-element,
+.mat-chip-list-wrapper .mat-standard-chip {
+  margin: 4px;
+}

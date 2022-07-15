@@ -1,0 +1,14 @@
+.ingredients-title
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #4A525A;
+}
+
+.ingredients
+{
+  color: #4A525A;
+  line-height: 30px;
+}

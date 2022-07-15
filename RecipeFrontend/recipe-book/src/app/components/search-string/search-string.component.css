@@ -1,0 +1,18 @@
+.search
+{
+  display: flex;
+}
+
+.search__string
+{
+  min-height: 73px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+  border-radius: 16px;
+  border: 0;
+  margin-right: 16px;
+  padding-left: 32px;
+  min-width: 100%;
+}
+

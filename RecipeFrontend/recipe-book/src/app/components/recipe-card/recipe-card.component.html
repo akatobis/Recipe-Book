@@ -1,0 +1,50 @@
+<div class="recipe">
+  <!-- <div class="name-autor">@glazest</div> -->
+  <img class="recipe__img" src="assets/images/recipe-background.png" alt="">
+  <div class="recipe__content">
+
+    <div class="recipe-content__top">
+
+      <div class="tags">
+        <div *ngFor="let recipeTag of recipeTags" class="tag">{{recipeTag.name}}</div>
+      </div>
+
+      <div class="recipe-content__retings">
+        <button class="recipe-content__reting">
+          <img class="recipe-content-reting__img" src="assets/images/ic-star.svg" alt="">
+          <span>{{recipeLikesCount}}</span>
+        </button>
+
+        <button class="recipe-content__reting">
+          <img class="recipe-content-reting__img" src="assets/images/ic-like.svg" alt="">
+          <span>{{recipeFavouritesCount}}</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="recipe-content__descriprion">
+      <h3 class="recipe-content-descriprion__title">{{title}}</h3>
+      <p class="recipe-content-descriprion__text">{{description}}</p>
+    </div>
+
+    <div class="recipe-content__countings">
+      <div class="recipe-content__counting">
+        <img src="assets/images/big-timer.svg" alt="">
+        <div class="recipe-content-counting__texts">
+          <p class="recipe-content-counting__text-1">Время приготовления:</p>
+          <span class="recipe-content-counting__text-2">{{cookingTime}} мин</span>
+        </div>
+      </div>
+
+      <div class="recipe-content__counting">
+        <img class="recipe-content-counting__img" src="assets/images/two-people.svg" alt="">
+        <div class="recipe-content-counting__texts">
+          <p class="recipe-content-counting__text-1">Рецепт на:</p>
+          <span class="recipe-content-counting__text-2">{{portions}} персон</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

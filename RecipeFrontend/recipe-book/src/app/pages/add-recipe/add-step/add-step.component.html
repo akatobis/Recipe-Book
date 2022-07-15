@@ -1,0 +1,8 @@
+<div class="add-step step">
+  <div class="add-step__title">
+    <h3>Шаг {{stepNumber}}</h3>
+    <button (click)="delete()"><img src="assets/images/close.svg" alt=""></button>
+  </div>
+
+  <textarea class="add-step__description" [(ngModel)]="recipeStep.description" placeholder="Описание шага"></textarea>
+</div>

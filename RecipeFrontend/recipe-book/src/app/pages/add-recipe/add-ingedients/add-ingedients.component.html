@@ -1,0 +1,8 @@
+<div class="add-ingrediente">
+  <button (click)="delete()"><img class="add-ingredients__img" src="assets/images/close.svg" alt=""></button>
+  <form class="add-ingredient">
+    <input class="add-ingredient__title" type="text" [(ngModel)]="ingredientBlock.name" placeholder="Заголовок для ингридиентов">
+    <textarea class="add-ingredient__products" [(ngModel)]="ingredientBlock.recipeIngredients" placeholder="Список подуктов для категории"></textarea>
+  </form>
+  <div>{{ingredientBlock.recipeIngredients}}</div>
+</div>
